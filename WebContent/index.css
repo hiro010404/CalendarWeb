@@ -1,0 +1,163 @@
+
+
+body {
+  background-color: LightYellow;
+  text-align: center;
+  font-size: 30px;
+}
+
+.top{
+   float: left;
+   font-size: 20px;
+}
+
+#login_button {
+  margin: 20px;
+}
+
+#signup_button {
+  margin: 20px;
+}
+
+#exp_button {
+  margin: 20px;
+  width: 400px;
+}
+
+.execute_button {
+  width: 170px;
+  height: 50px;
+  font-size: 30px;
+}
+
+.form {
+  position: relative;
+  top: 50px;
+}
+
+input.blank {
+  width: 300px;
+  height: 40px;
+  font-size: 30px;
+  margin: 10px;
+}
+
+#title {
+  font-size: 80px;
+}
+
+#cauntion {
+  color: red;
+}
+
+.selecter{
+  position: relative;
+  top: 100px;
+}
+
+/*全体*/
+.wrapper{
+    max-width: 600px;
+    margin: 0 auto;
+    color: #666;
+}
+#header {
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+    margin: 1rem 0 0;
+}
+
+/*カレンダー*/
+#calendar {
+    text-align: center;
+    width: 100%;
+}
+table {
+    outline: 2px solid #ddd;
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    color: #000;
+}
+th, td {
+    outline: 1px solid #ddd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+/*日曜日*/
+td:first-child {
+    color: red;
+}
+/*土曜日*/
+td:last-child {
+    color: blue;
+}
+/*前後月の日付*/
+td.disabled {
+    color: #ccc;
+}
+/*本日*/
+td.today {
+    background-color: #D65E72;
+    color: #fff;
+}
+
+.ok{
+  outline: none;
+  background: transparent;
+  color:LightGreen;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 0;
+  height: 3vw;
+}
+
+/*ボタン*/
+#next-prev-button {
+    position: relative;
+}
+#next-prev-button button{
+    cursor: pointer;
+    background: #B78D4A;
+    color: #fff;
+    border: 1px solid #B78D4A;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0;
+}
+#next-prev-button button:hover{
+    background-color: #D4BB92;
+    border-color: #D4BB92;
+}
+#prev {
+    float: left;
+}
+#next {
+    float: right;
+}
+
+
+/*-------------------------
+  右から左に流れるテキスト
+-------------------------*/
+.text-ani_sample {
+    background:black;        /*背景色*/
+    overflow:hidden;
+}
+
+.text-ani_sample p {
+    margin:0;
+    font-size:30px;         /*文字サイズ*/
+    color:#fff;              /*文字の色*/
+    animation: flowing 20s linear infinite;    /*アニメーション*/
+    transform:translateX(80%);                /*最初の位置*/
+}
+
+@keyframes flowing {
+  100% {
+    transform:translateX(-80%);    /*終了の位置*/
+}
