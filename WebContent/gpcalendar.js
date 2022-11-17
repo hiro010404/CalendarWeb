@@ -5,6 +5,8 @@ var showDate = new Date(today.getFullYear(), today.getMonth(), 1);
 var days = 0;
 var changes = {};
 
+const modal = document.getElementById('easyModal');
+
 // 初期表示
 window.onload = function () {
     showProcess(today, calendar);
@@ -22,39 +24,13 @@ function next(){
 }
 
 function theday(year,month,day){
-  console.log(date);
-  var dayElement = document.getElementById("day"+day);
-  var date = year+"/"+month+"/"+day;
+  var dateMsg =document.getElementById("date");
+  dateMsg.innerText=year+"年"+month+"月"+day+"日の予定";
+  modal.style.display = 'block';
+}
 
-  if(dayElement.lastChild.value=="○"){
-    dayElement.lastChild.value="△";
-    dayElement.lastChild.className="triangle";
-    /*
-    dayElement.lastChild.style.fontSize="30px";
-    dayElement.lastChild.style.lineHeight="1.75";
-    dayElement.lastChild.style.color="Orange";*/
-
-  }else if (dayElement.lastChild.value=="△") {
-    dayElement.lastChild.value="×";
-    dayElement.lastChild.className="cross";
-    /*
-    dayElement.lastChild.style.fontSize="50px";
-    dayElement.lastChild.style.lineHeight="0";
-    dayElement.lastChild.style.width="45px";
-    dayElement.lastChild.style.color="Red";
-    */
-
-  }else if(dayElement.lastChild.value=="×"){
-    dayElement.lastChild.value="○"
-    dayElement.lastChild.className="circle";
-    /*
-    dayElement.lastChild.style.fontSize="50px";
-    dayElement.lastChild.style.lineHeight="0";
-    dayElement.lastChild.style.width="null";
-    dayElement.lastChild.style.color="LightGreen";
-    */
-  }
-  changes[date]=dayElement.lastChild.value;
+function close(){
+   modal.style.display = 'none';
 }
 
 function getMark(mark){
@@ -126,4 +102,15 @@ function createProcess(year, month) {
         calendar += "</tr>";
     }
     return calendar;
+}
+window.addEventListener("load", function() {
+	var pekeButtonElement = document.getElementsByClassName('modalClose')[0];
+	pekeButtonElement.addEventListener("click",close,false);
+}, false);
+
+window.addEventListener('click', outsideClose);
+function outsideClose(e) {
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
 }

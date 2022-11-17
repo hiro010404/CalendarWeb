@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>CalendarBookService</title>
+  <link rel="stylesheet" type="text/css" href="index.css"/>
+
+</head>
+<div class="top">
+  <a href="index.html">ログアウト</a>
+  <a href="mypage.html">マイページ</a>
+</div>
+<br>
+
+<body>
+  <span id="title">現在所属しているグループ</span><br>
+  <div class="text-ani_sample">
+      <p>現在新着の予約はありません。</p>
+  </div>
+
+  <div id="frends">
+  </div>
+
+  <div class="wrapper">
+<!-- xxxx年xx月を表示 -->
+<h1 id="header"></h1>
+
+<!-- ボタンクリックで月移動 -->
+<div id="next-prev-button">
+      <button id="prev" onclick="prev()">‹</button>
+    <button id="next" onclick="next()">›</button>
+</div>
+
+<!-- カレンダー -->
+<div id="calendar">
+</div>
+</div>
+
+<div id="easyModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 id="date">YYYY年MM月DD日の予定</h1>
+        <span class="modalClose">×</span>
+      </div>
+      <div class="modal-body">
+        あなた以外にこのグループのメンバーは存在しません。<br>
+        友達を招待してメンバーを増やしましょう。
+      </div>
+    </div>
+  </div>
+<div id="member">
+
+</div>
+
+
+</body>
+<script type="text/javascript" src="gpschedule.js"></script>
+<script type="text/javascript" src="gpcalendar.js"></script>
+</html>
