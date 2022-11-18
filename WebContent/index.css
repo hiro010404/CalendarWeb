@@ -24,13 +24,13 @@ body {
   width: 400px;
 }
 
-.frend_button{
+.group_button{
   height:100px;
   width:400px;
   font-size: 25px;
 }
 
-#frend_name{
+#group_name{
  position:relative;
  top:-25%;
 }
@@ -147,10 +147,36 @@ td.today {
   color: Red;
 }
 
-#frends{
+#groups{
   float: left;
   height: 770px;
   overflow: scroll;
+}
+
+#memberbox{
+  float: right;
+  margin:10px;
+  height: 400px;
+  width: 380px;
+  border: 5px solid gray;
+  border-radius: 40px;
+}
+
+#member{
+  overflow: scroll;
+  height: 80%;
+}
+
+#member_content{
+  text-align:left;
+  width:100%;
+  border: 1px solid black;
+}
+
+#member_name{
+  position:relative;
+  bottom:10px;
+  font-size: 20px;
 }
 /*ボタン*/
 #next-prev-button {
